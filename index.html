@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chu-Time-Bakery</title>
+
+</head>
+
+<link rel="stylesheet" href="./lightbox/css/lightbox.css">
+<style>
+    body {
+        background-color: #fff;
+        background-image: url(./images/body-background-image.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* filter: blur(0.5px);  */
+        /* 整體模糊 */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrap {
+        width: 1200px;
+        margin: auto;
+        padding-top: 240px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        /* background-color: rgb(247, 228, 177); */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        /* width: 1200px;
+        height: 130px;
+        margin: 1em 0;
+        position: relative;
+        padding: 0.25em 0;
+        font-weight: bold; */
+    }
+
+
+
+    .header .img-box img {
+        max-width: 100%;
+        height: auto;
+        /* width: 250px;
+        float: left;
+        padding-left: 15px; */
+    }
+
+    .nav {
+        display: flex;
+        /* justify-content: right;
+        padding-top: 105px;
+        padding-right: 15px; */
+        /* border: 1px solid red; */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-img img {
+
+        width: 60px;
+        height: 60px;
+        /* position: absolute; */
+        /* border: red 1px solid; */
+        /* flex-basis: 10px; */
+        padding-top: 115px;
+
+
+
+    }
+
+    .nav-txt ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;        
+        padding-top: 125px;
+    }
+
+    /* .nav ul li {
+        margin-left: 10px;
+        padding-top: 20px;
+    } */
+
+
+    .nav-txt ul li a {
+        background-color: rgb(248, 217, 149);
+        padding: 5px 10px;
+        font-size: 15px;
+        color: rgb(82, 55, 2);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+
+    .nav-txt ul li a:hover {
+        background-color: rgb(243, 198, 115);
+        color: rgb(182, 92, 18);
+    }
+
+    .content {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        align-items: flex-start;
+
+    }
+    .content img {
+        /* float: left;
+        width: 400px;
+        height: 400px;
+        margin-top: 50px; */
+        /* margin-right: 40px; */
+        border-radius: 15px;
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    .content-box {
+        float: left;
+        width: 600px;
+
+    }
+
+    /* .content-box ul li{
+        float: left;
+        
+    } */
+    .content-box {
+        /* background-image:url(./images/content-background.png);
+        background-size:80%;
+        background-position: 45% 65%;
+        background-repeat:no-repeat ; */
+        /* opacity: 0.5; */
+        position: relative;
+    }
+
+    .content-box img {
+
+        position: absolute;
+        opacity: .5;
+        z-index: -10;
+        margin-left: 180px;
+        padding-top: 240px;
+        /* border: 1px solid red;   
+        width: 500px; */
+
+    }
+
+    .content-box-txt {
+        padding-top: 30px;
+        color: rgb(82, 55, 2);
+    }
+
+    .content-box-txt h1,
+    h2 {
+        font-size: 40px;
+        color: rgb(82, 55, 2);
+    }
+
+    .content-box-txt h2 {
+        /* padding-top: 30px; */
+        font-size: 25px;
+    }
+    .content-box ul li a {
+        list-style: none;
+    }
+
+    .content img {
+        margin-top: 40px;
+        float: right;
+        width: 300px;
+        height: 200px;
+        border-radius: 35px;
+        /* position: relative;
+        filter: blur(0.5px); */
+        /* 整體模糊 */
+    }
+
+    .content-r img {
+        /* margin-top: 40px;
+        display:flex;
+        width: 550px;
+        height: 600px;
+        border-radius: 35px; */
+        /* position: relative;
+        filter: blur(0.5px); */
+        /* 整體模糊 */
+        border-radius: 15px;
+        flex: 1 1 50%;
+        max-width: 100%;
+        width: 550px;
+        height: 600px;
+    }
+
+    .content-box-txt p {
+
+        /* padding-top: 30px; */
+        padding: 50px;
+        line-height: 2;
+        /* font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif; */
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 800;
+        /* letter-spacing: 1.5px; */
+        color: rgb(82, 55, 2);
+
+    }
+
+    .content-box-txt span {
+        text-align: none;
+    }
+
+
+    .customer {
+
+        clear: both;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .customer:after {
+        content: "";
+        display: block;
+        height: 6px;
+        background-image: linear-gradient(to right, rgb(248, 217, 149) 0%, transparent);
+        /* margin-top: 155px; */
+    }
+
+    .customer h2 {
+
+        font-size: 35px;
+    }
+
+    .box {
+        margin-left: 50px;
+    }
+
+    .box ul li {
+        list-style: none;
+    }
+
+    .box img {
+        float: left;
+        width: 200px;
+        height: 450px;
+        margin: 10px;
+        border-radius: 25px;
+
+
+
+    }
+
+    .footer {
+        clear: both;
+        padding-top: 20px;
+        text-align: center;
+        /* padding-top: 20px; */
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    /* 響應式設計 */
+    @media (max-width: 768px) {
+
+        .wrap {
+            padding-top: 100px;
+        }
+
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .content {
+            flex-direction: column;
+        }
+
+        .content-box,
+        .content-r {
+            fmax-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-r img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-img img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .content-r img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* .content-r h2 {
+        font-size: 1.5em;
+        }
+
+        .content-r p {
+        font-size: 0.9em;
+        } */
+
+        .content-box-txt p {
+            font-size: 14px;
+        }
+    }
+</style>
+
+<body>
+    <!-- 最外層 -->
+    <div class="wrap">
+        <!-- 標題區 -->
+        <div class="header">
+            <div class="img-box">
+                <img src="./images/logo-1104-03.png" alt="">
+            </div>
+            <!-- 右側選單 -->
+            <div class="nav">
+
+                <div class="nav-img">
+                    <img src="./images/shopping-cart.png" alt="">
+
+                </div>
+                <div class="nav-txt">
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/index.html">首頁</a></li>
+                        <li><a href="http://127.0.0.1:5500/story.html">品牌故事</a></li>
+                        <li><a href="http://127.0.0.1:5500/product.html">幸福產品</a></li>
+                        <li><a href="http://127.0.0.1:5500/news.html">最新消息</a></li>
+                        <li><a href="http://127.0.0.1:5500/others.html">那些你想知道的事</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- 內容區 -->
+        <div class="content">
+            <!-- 左側品牌區 -->
+            <div class="content-box">
+                <img src="./images/content-background.png" alt="">
+                <div class="content-box-txt">
+                    <h2>ABOUT US</h2>
+                    <h1>秋蒔</h1>
+                    <h2>Chu Time Bakery</h2>
+                    <p>
+                        &nbsp; &nbsp; &nbsp; &nbsp;每一個圓形貝果，都象徵著健康與活力的無限循環。<br>
+                        我們堅信，健康的生活從每一口開始，因此選用減醣、高蛋白、純天然的食材，用心打造每一顆貝果。它不僅低負擔，更充滿嚼勁與風味，讓你在享受美味的同時，輕鬆維持健康平衡。
+                        <br>
+
+                        < &nbsp;健康，真的可以很美味！><br> &nbsp; &nbsp; &nbsp;
+                            &nbsp;咬下每一口，感受純粹新鮮的食材帶來的滿足，讓貝果不僅是美味點心，更是你生活中健康活力的象徵。圓形的力量，承載著無限可能——無論是早晨的能量補給，還是忙碌間的暖心時刻，每一口都讓你充滿力量，隨時隨地咬出圓滿的生活新篇章。<span>
+                                <a href="http://127.0.0.1:5500/story.html">了解更多</a></li>
+                            </span>
+
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- 右側圖片區 -->
+            <div class="content-r">
+                <img src="./images/mix-bagel.png" alt="">
+            </div>
+
+
+
+        </div>
+
+
+        <!-- 顧客好評區 -->
+        <div class="customer">
+            <h2>顧客好評</h2>
+        </div>
+        <!-- 圖片輪播區 -->
+        <div class="carousel">
+            <div class="box">
+                <ul>
+                    <li><a href="./images/customer01.JPG" data-lightbox="group"><img src="./images/customer01.JPG"
+                                alt=""></a></li>
+                    <li><a href="./images/customer02.JPG" data-lightbox="group"><img src="./images/customer02.JPG"
+                                alt=""></a></li>
+                    <li><a href="./images/customer03.JPG" data-lightbox="group"><img src="./images/customer03.JPG"
+                                alt=""></a></li>
+                    <li><a href="./images/customer04.JPG" data-lightbox="group"><img src="./images/customer04.JPG"
+                                alt=""></a></li>
+                    <li><a href="./images/customer05.JPG" data-lightbox="group"><img src="./images/customer05.JPG"
+                                alt=""></a></li>
+                    <li><a href="./images/customer06.JPG" data-lightbox="group"><img src="./images/customer06.JPG"
+                                alt=""></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- 頁尾區 -->
+        <div class="footer">
+            <p>© 2024 秋蒔 Chu-Time-Bakery</p>
+        </div>
+
+    </div>
+
+    <!-- 相片旋轉木馬輪播效果 -->
+    <!-- jQuery主程式 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./lightbox/js/lightbox.js"></script>
+    <!-- 旋轉木馬主程式 -->
+    <script src="./js/jquery.jcarousellite.min.js"></script>
+    <!-- 自行撰寫JS  -->
+    <!-- 駝峰式命名 -->
+    <!-- 小駝峰(第二個單字開始的字首為大寫) -->
+    <!-- 大駝峰(每一個單字開始的字首為大寫) -->
+    <script>
+        $(function () {
+            $('.box').jCarouselLite({
+                auto: 1200, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1200, //每次捲動的速度
+                scroll: 3, //每次捲動的張數
+                visible: 5, //可見的張數
+            });
+        });
+    </script>
+</body>
+
+</html>

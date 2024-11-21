@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chu Time - 幸福產品</title>
+    <link rel="stylesheet" href="./lightbox/css/lightbox.css">
+    <style>
+        /* 基本樣式 */
+        body {
+            background-color: #fff;
+            background-image: url(./images/body-background-image.png);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 外層容器 */
+        .wrap {
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 240px;
+            box-sizing: border-box;
+        }
+
+        /* Header 區域 */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .header .img-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            display: flex;
+            }
+
+        .nav-img img {
+            width: 60px;
+            height: 60px;
+            /* margin-right: 10px; */
+            padding-top: 120px;
+            padding-left: 50px;
+            
+        }
+
+        .nav-txt ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            margin: 0;
+            padding-top: 145px;
+            padding-left: 10px;
+        }
+
+        .nav-txt ul li a {
+            background-color: rgb(248, 217, 149);
+            padding: 5px 10px;
+            font-size: 15px;
+            color: rgb(82, 55, 2);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-txt ul li a:hover {
+            background-color: rgb(243, 198, 115);
+            color: rgb(182, 92, 18);
+        }
+
+        /* Content 區域 */
+        .content {
+
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            align-items: flex-start;
+        }
+
+        /* .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        } */
+
+        .nature {
+            flex: 1 1 60%;
+        }
+
+        .nature h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .nature img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+        }
+
+        .photo .block {
+            flex: 1 1 40%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            width: 600px;
+
+        }
+
+
+        /* .photo .block > div {
+            width: 45%;
+            display: inline-block;
+            text-align: center;
+        } */
+
+
+        .photo .block img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+
+        }
+
+        .photo .block p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+
+        }
+
+        /* 響應式處理 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nature img {
+                max-width: 90%;
+            }
+
+            .photo .block>div {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo .block>div {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最外層 -->
+    <div class="wrap">
+        <!-- 標題區 -->
+        <div class="header">
+            <div class="img-box">
+                <img src="./images/logo-1104-03.png" alt="Logo">
+            </div>
+            <!-- 右側選單 -->
+            <div class="nav">
+                <div class="nav-img">
+                    <img src="./images/shopping-cart.png" alt="Shopping Cart">
+                </div>
+                <div class="nav-txt">   
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="story.html">品牌故事</a></li>
+                        <li><a href="product.html">幸福產品</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="others.html">那些你想知道的事</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+
+        <!-- 內容區 -->
+        <div class="content">
+            <!-- 左側大圖片區域 -->
+            <div class="nature">
+                <h2>堅持使用天然素材</h2>
+                <img src="./images/nature-03.jpg" alt="天然素材">
+            </div>
+
+            <!-- 右側產品小圖片區域 -->
+            <div class="photo">
+                <div class="block">
+                    <div>
+                        <a href="./images/bagel05-02.png" data-lightbox="group" data-title="藍莓乳酪貝果">
+                            <img src="./images/bagel01.png" alt="藍莓乳酪貝果">
+                        </a>
+                        <p>藍莓乳酪貝果</p>
+                    </div>
+                    <div>
+                        <a href="./images/bagel05-03.png" data-lightbox="group" data-title="鮮奶起士貝果">
+                            <img src="./images/bagel02.png" alt="鮮奶起士貝果">
+                        </a>
+                        <p>鮮奶起士貝果</p>
+                    </div>
+                    <div>
+                        <a href="./images/bagel05-04.png" data-lightbox="group" data-title="醇濃巧克力貝果">
+                            <img src="./images/bagel03.png" alt="醇濃巧克力貝果">
+                        </a>
+                        <p>醇濃巧克力貝果</p>
+                    </div>
+                    <div>
+                        <a href="./images/bagel05-05.png" data-lightbox="group" data-title="墨西哥辣腸貝果">
+                            <img src="./images/bagel04.png" alt="墨西哥辣腸貝果">
+                        </a>
+                        <p>墨西哥辣腸貝果</p>
+                    </div>
+                    <div>
+                        <a href="./images/bagel05-06.png" data-lightbox="group" data-title="白醬燻雞貝果">
+                            <img src="./images/bagel05.png" alt="白醬燻雞貝果">
+                        </a>
+                        <p>白醬燻雞貝果</p>
+                    </div>
+                    <div>
+                        <a href="./images/bagel05-07.png" data-lightbox="group" data-title="鐵觀音貝果">
+                            <img src="./images/bagel06.png" alt="鐵觀音貝果">
+                        </a>
+                        <p>鐵觀音貝果</p>
+                    </div>
+                    <div class="box7">                        
+                            <a href="./images/bagel05-08.png" data-lightbox="group">
+                                <img src="./images/bagel07.png" alt="">
+                            </a>
+                            <p>芝麻乳酪貝果</p>
+                    </div>
+                    <div class="box8">                        
+                            <a href="./images/bagel05-09.png" data-lightbox="group"><img src="./images/bagel08.png"
+                                    alt=""></a>                        
+                        <p>全麥貝果</p>
+                    </div>
+                    <div class="box9">                        
+                            <a href="./images/bagel05-10.png" data-lightbox="group"><img src="./images/bagel09.png"
+                                    alt=""></a>                        
+                        <p>培根起司貝果</p>
+                    </div>
+                    <div class="box10">                        
+                            <a href="./images/bagel05-11.png" data-lightbox="group"><img src="./images/bagel10.png"
+                                    alt=""></a>                        
+                        <p>起司三重奏貝果</p>
+                    </div>
+                    <div class="box11">                        
+                            <a href="./images/bagel05-12.png" data-lightbox="group"><img src="./images/bagel11.png"
+                                    alt=""></a>                        
+                        <p>黑芝麻貝果 </p>
+                    </div>
+                    <div class="box12">                       
+                            <a href="./images/bagel05-13.png" data-lightbox="group"><img src="./images/bagel12.png"
+                                    alt=""></a>                        
+                        <p>鄉村貝果 </p>
+                    </div>
+                    <div class="box13">                        
+                            <a href="./images/bagel05-14.png" data-lightbox="group"><img src="./images/bagel13.png"
+                                    alt=""></a>                        
+                        <p>肉桂葡萄貝果 </p>
+                    </div>
+                    <div class="box14">                        
+                            <a href="./images/bagel05-15.png" data-lightbox="group"><img src="./images/bagel14.png"
+                                    alt=""></a>                        
+                        <p>鮮奶原味貝果</p>
+                    </div>
+                    <div class="box15">                        
+                            <a href="./images/bagel05-16.png" data-lightbox="group"><img src="./images/bagel15.png"
+                                    alt=""></a>                        
+                        <p>抹茶紅豆貝果</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./lightbox/js/lightbox.js"></script>
+</body>
+
+</html>
